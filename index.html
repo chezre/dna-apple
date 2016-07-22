@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        
+        <link rel="stylesheet" href="libs/jQM-flat/jquery.mobile.flatui.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>DNA</title>
+    </head>
+    <body>
+        <div id="app">
+            
+
+			<!-- Register Page -->
+            <div  id="register-page" data-role="page">
+                <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
+                    <h1>Register</h1>
+                </div>
+                <div data-role="content" id="frmDiv">
+                    <form  id="register-form" name="register-form" action="" data-ajax="false">
+                        <input type="hidden" name="id" id="myId" value=""/>
+                        <label for="first_name">Name</label>
+                        <input type="text" name="first_name" id="first_name" data-mini="true" placeholder="Ima"/>
+                        <label for="last_name">Surname</label>
+                        <input type="text" name="last_name" id="last_name" data-mini="true" placeholder="Believer"/>
+                        <label for="phone">Cellphone</label>
+                        <input type="number" name="phone" id="phone" data-mini="true" placeholder="0821234567"/>
+                        <label for="birth_date">Date of Birth</label>
+                        <input type="date" name="birth_date" id="birth_date" data-mini="true" />
+                        
+                        <label for="school_university">School/Tertiary Institution</label>
+                        <input type="text" name="school_university" id="school_university" data-mini="true" placeholder="Awesome High School"/>
+                        <label for="grade_year">Grade/Year</label>
+                        <input type="number" name="grade_year" id="grade_year" data-mini="true" placeholder="8"/>
+                        
+                        <input type="hidden" name="lst" value="y" />
+                        <button type="button" data-theme="f" data-mini="false" class="ui-btn-hidden" aria-disabled="false" id="btnSave">Save</button>
+                    </form>
+                </div>
+				
+				<div data-role="content" id="msg">
+                    <div id="logoContainer" class="centerText">
+                        <span style="font-size:24pt">Saving...</span>
+                    </div>
+                </div>
+				
+                <div data-role="content" id="resultNotOk">
+                    Sorry, your deets were not saved.  Please try again.    
+                </div>
+				
+                <div data-role="content" id="resultOk">
+                    <div id="logoContainer" class="centerText">
+                        <span style="font-size:24pt" id="welcome">Welcome !!!</span>
+                    </div>
+                </div>
+				
+                <div data-role="footer" data-id="footer1" data-position="fixed" data-tap-toggle="false"></div>
+            </div>
+			<!-- /Register page -->
+            
+            <!-- home page  -->
+            <div id="home-page" data-role="page">
+                <div data-role="content" >
+                    <div id="logoContainer" class="centerText">
+                        <span style="font-size:36pt">&nbsp;</span>
+                    </div>
+                </div>
+                <div data-role="footer" data-id="footer0" data-position="fixed" data-tap-toggle="false"></div>
+            </div>
+            <!-- /page  -->
+            
+            <!--  Me page -->
+            <div  id="me-page" data-role="page">
+                <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
+                    <h1>Moola</h1>
+                </div>
+                <div data-role="content" class="centerText">
+                    <div id="ptsMonitorDiv">
+						<div id="ptsHeading">You have</div> 
+						<div id="moola"></div>
+						<div id="currIndicator">Moola</div>
+					</div>
+                    <button type="submit" data-theme="f" data-mini="false" class="ui-btn-hidden" aria-disabled="false" id="btnCheck">Check</button>
+                </div>
+                <div data-role="footer" data-id="footer3" data-position="fixed" data-tap-toggle="false"></div>
+            </div>
+			<!-- /Me page -->
+            
+			<!--  announcements page  -->
+			<div  id="announcements-page" data-role="page">
+                <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
+                    <h1>Announcements</h1>
+                </div>
+                <div data-role="content" >
+                    <h3>Whats happening?</h3>
+					<div id="announcementsMenu">
+						<ul id="ulAnnouncements"></ul>
+					</div>
+					<div id="announcementsDiv"></div>
+                </div>
+                <div data-role="footer" data-id="footer4" data-position="fixed" data-tap-toggle="false"></div>
+            </div>
+			<!--  end announcements page  -->
+
+			<!--  About page -->
+            <div  id="about-page" data-role="page">
+                <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+                    <h1>ABOUT</h1>
+                </div>
+                <div data-role="content"  class="big-text">
+                    <h2>DNA Youth</h2>
+                    <div id="map_canvas">
+						<img src="img/map.png" width="300" />
+					</div>
+                    <div>
+                        <p>His People South<br>
+                        C/o Retreat rd & M5<br>
+                        Retreat<br>
+                        <p>Tel: 021 595 8900<br>
+                        Fax: 021 595 8901</p>
+                        <p>Email: info@hispeople.org</p>
+                    </div>
+                </div>
+                <div data-role="footer" data-id="footer5" data-position="fixed" data-tap-toggle="false"></div>
+            </div>
+			<!-- /About page  -->
+			
+			<!--  Facebook page >
+            <div  id="facebook-page" data-role="page">
+                <div data-role="header" data-id="header1" data-position="fixed" class="ui-header">
+                    <h1>Facebook Feed</h1>
+                </div>
+                <div data-role="content"  class="big-text">
+                    <p>facebook data here...</p>
+                </div>
+            </div>
+			<!-- /Facebook page  -->
+            
+            <!--  The real footer -->
+            <div id="footer" data-role="footer" data-id="footer1" data-position="fixed" data-tap-toggle="false">
+                <div id="navbar" data-role="navbar">
+                    <ul>
+						<li><a href="#announcements-page"><img src="img/announcements.png" height="16" width="16" /><br />Announcements</a></li>
+						<li><a href="#me-page"><img src="img/money.png" height="16" width="16" /><br />Moola</a></li>
+                        <li><a href="#about-page"><img src="img/about.png" height="16" width="16" /><br />About</a></li>
+						<li><a href="#register-page"><img src="img/cross.png" height="16" width="16" /><br />Me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- script type="text/javascript" src="cordova.js"></script -->
+        <script type="text/javascript" src="libs/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.3.2.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+			//localStorage.clear();
+            app.initialize();
+        </script>
+    </body>
+</html>
